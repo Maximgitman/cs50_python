@@ -18,5 +18,5 @@ def main():
         print(extension_dict["other"])
     
 
-    
+
 main()
