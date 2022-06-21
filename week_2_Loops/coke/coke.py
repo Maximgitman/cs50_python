@@ -12,4 +12,3 @@ while amount > 0:
     elif amount < 0:
         debt = insert_coin - (amount + insert_coin)
         print(f"Change Owed: {debt}")
-
