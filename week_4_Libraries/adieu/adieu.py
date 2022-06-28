@@ -10,11 +10,11 @@ while True:
         break
 
 if len(names) == 1:
-        print(adieu + names[0])
+    print(adieu + names[0])
 elif len(names) == 2:
-        print(adieu + names[0] + " and " + names[1])
-else:      
-    for n in range(len(names) -1):
+    print(adieu + names[0] + " and " + names[1])
+else:
+    for n in range(len(names) - 1):
         if n == 0:
             adieu += names[n]
         else:
