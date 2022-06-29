@@ -24,6 +24,7 @@ def main():
                 error += 1
                 print("EEE")
                 if error == 3:
+                    score -= 1
                     print(f"{first} + {second} = {first + second}")
                 else:
                     try:
@@ -46,8 +47,13 @@ def get_level():
 def generate_integer(level):
     start = 10 ** (level - 1)
     end = (10**level) - 1
-    first_number = random.randint(start, end)
-    second_number = random.randint(start, end)
+
+    if level == 1:
+        first_number = random.randint(start-1, end)
+        second_number = random.randint(start-1, end)
+    else:
+        first_number = random.randint(start, end)
+        second_number = random.randint(start, end)
 
     return first_number, second_number
 
