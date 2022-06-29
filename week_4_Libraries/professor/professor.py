@@ -4,7 +4,7 @@ import random
 
 def main():
     n = get_level()
-    score = 0
+    score = 1
 
     for i in range(10):
         error = 0
