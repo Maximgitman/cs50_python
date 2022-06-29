@@ -49,8 +49,8 @@ def generate_integer(level):
     end = (10**level) - 1
 
     if level == 1:
-        first_number = random.randint(start-1, end)
-        second_number = random.randint(start-1, end)
+        first_number = random.randint(start - 1, end)
+        second_number = random.randint(start - 1, end)
     else:
         first_number = random.randint(start, end)
         second_number = random.randint(start, end)
