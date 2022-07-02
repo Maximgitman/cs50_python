@@ -1,11 +1,26 @@
-from selectors import EpollSelector
+from sys import exit, argv
+from textwrap import indent
 import requests
-import sys
+import json
 
 
-if len(argv) == 1:
-    print("Missing command-line argument")
-elif type(argv[2]) == str:
-    print("Command-line argument is not a number")
+if len(argv) == 2:
+    try:
+        quantity_bitcoin = float(argv[1])
+    except ValueError:
+        print("Command-line argument is not a number")
+        exit(1)
 else:
-    quantity_bitcoin = argv[2]
+    print("Missing command-line argument")
+    exit(1)
+
+try:
+    request = requests.get(url="https://api.coindesk.com/v1/bpi/currentprice.json")
+    json_req = request.json()
+    rate = json_req["bpi"]["USD"]["rate_float"]
+    bit_in_usd = rate * quantity_bitcoin
+    print(f"${bit_in_usd:,.4f}")
+
+except requests.RequestException:
+    print("RequestException")
+    exit(1)
