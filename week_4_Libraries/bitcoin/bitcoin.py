@@ -1,6 +1,7 @@
 from selectors import EpollSelector
-from sys import argv, exit
 import requests
+import sys
+
 
 if len(argv) == 1:
     print("Missing command-line argument")
