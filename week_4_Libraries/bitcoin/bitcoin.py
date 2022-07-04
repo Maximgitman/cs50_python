@@ -5,7 +5,7 @@ import requests
 if len(argv) == 2:
     try:
         quantity_bitcoin = float(argv[1])
-    except:
+    except ValueError:
         print("Command-line argument is not a number")
         exit(1)
 else:
