@@ -8,11 +8,11 @@ def shorten(word):
     new_twitt = ""
 
     for i in word:
-        if i in vowels:
+        if i.lower() in vowels:
             pass
         else:
             new_twitt += i
-    return new_twitt.lower()
+    return new_twitt
 
 
 if __name__ == "__main__":
