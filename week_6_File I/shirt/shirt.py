@@ -2,6 +2,7 @@ import PIL.Image
 from PIL import Image, ImageOps
 from sys import exit, argv
 
+
 # Permitted extension for Image
 permitted_extension = ["jpg", "png"]
 
