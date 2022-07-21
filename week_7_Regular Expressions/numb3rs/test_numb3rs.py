@@ -15,4 +15,4 @@ def test_input_format():
     assert validate(r"1.2.3") == False
     assert validate(r"1") == False
     assert validate(r"cat") == False
-
+    assert validate(r"cat.dog.") == False
