@@ -5,6 +5,7 @@ def main():
     email = input("What's your email address? ")
     is_email_address = checkers.is_email(email)
 
+    # Print VAlid if it is email
     if is_email_address:
         print("Valid")
     else:
