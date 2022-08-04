@@ -8,6 +8,7 @@ def main():
     # Print VAlid if it is email
     if is_email_address:
         print("Valid")
+    # Print Invalid otherwise
     else:
         print("Invalid")
 
