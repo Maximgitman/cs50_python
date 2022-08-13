@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import date, datetime
 import inflect
 import sys
 
@@ -15,11 +15,17 @@ class Minutes:
         return f"{words.capitalize()} minutes"
 
 def main():
-    try:
-        birth_data = date.fromisoformat(input("Date of Birth: "))
-    except ValueError:
-        sys.exit("Invalid date format. Valid is YYYY-MM-DD")
+    birth_data = validate(date.fromisoformat(input("Date of Birth: ")))
+
     print(Minutes().get_minutes(birth_data))
+
+
+def validate(date_text):
+        try:
+            datetime.strptime(date_text, "%Y-%m-%d")
+        except ValueError:
+            sys.exit("Incorrect data format, should be YYYY-MM-DD")
+
 
 if __name__ == "__main__":
     main()
