@@ -268,6 +268,7 @@ def query():
 @app.route("/update_index", methods=["POST"])
 def update_index():
     if request.method == "POST":
+        print("update_index")
         global index, doc_keys, doc_text, index_created, t_matrix
         
         documents = json.loads(request.json)["documents"]
@@ -284,4 +285,5 @@ def update_index():
         index.add(t_matrix.astype(np.float32))
 
         index_created = True
+        print("update_index_done")
         return jsonify({"status" : "ok", "index_size" : index.ntotal}) 

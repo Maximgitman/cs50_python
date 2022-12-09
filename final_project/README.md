@@ -1,5 +1,5 @@
 # Quora questions similarity
-#### Video Demo:  <URL HERE> 
+#### Video Demo:  <https://youtu.be/_WvMWLxn2vI>
 #### Description:
 
 As a project finale, a system of prompts for similar questions based on Quora site data was implemented. Search exclusively on the main issue (title) without specifying the details (additional description).
