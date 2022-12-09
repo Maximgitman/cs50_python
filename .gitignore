@@ -2,8 +2,7 @@
 week_7_Regular Expressions/um/__pycache__/test_um.cpython-39-pytest-7.1.2.pyc
 week_7_Regular Expressions/um/__pycache__/um.cpython-39.pyc
 final_project/static/test.tsv
-final_project/static/queries.txt
-final_project/static/vocab.json
-final_project/static/glove.6B.50d.txt
-final_project/documents.json
-final_project/documents2.json
+project/static/queries.txt
+project/static/vocab.json
+project/static/glove.6B.50d.txt
+project/documents.json
