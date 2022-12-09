@@ -214,6 +214,18 @@ model = KNRM(embedding_matrix=embeddings_knrm)
 model.mlp.load_state_dict(torch.load(MLP_PATH))
 glove_embeddings = read_glove_embeddings(EMB_PATH_GLOVE)
 
+
+def main():
+    embeddings_knrm = torch.load("./static/embeddings_knrm.bin")["weight"]
+    glove_embeddings = read_glove_embeddings("./static/glove.6B.50d.txt")
+    index_created = change_index(0)
+
+def change_index(action_num: int):
+    if action_num == 0:
+        return False
+    else:
+        return 1
+
 with open(VOCAB_PATH) as json_file:
     vocab = json.load(json_file)
 
@@ -287,3 +299,8 @@ def update_index():
         index_created = True
         print("update_index_done")
         return jsonify({"status" : "ok", "index_size" : index.ntotal}) 
+
+
+if __name__=="__main__":
+    main()
+    app.run()
